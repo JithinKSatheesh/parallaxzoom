@@ -1,38 +1,595 @@
-.App {
-  text-align: center;
+*,html,body{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  width: 100%;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+  overflow-x: hidden;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.space-20{
+  width: 100%;
+  height: 20px;
+}
+
+.space-50{
+  width: 100%;
+  height: 50px;
+}
+
+
+.bg-grey{
+  background-color: #cbcbcb45;
+}
+
+.bg-black{
+  background-color: #141414;
+
+}
+
+.text-black{
+  color: black;
+  text-decoration: none;
+}
+
+
+
+/* ============================= */
+/* navbar css */
+/* ======================================= */
+
+
+.navbar{
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  /* background-color: rgba(255, 255, 255, 0.605); */
+  /* background-image: linear-gradient(white, rgba(255, 255, 255, 0.262)); */
+}
+
+.nav-brand{
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-brand-underline{
+  position: relative;
+  height: 2px;
+  background-color:black;
+}
+.nav-menu{
+  font-size: 1em;
+  transform: translateX(-26px);
+}
+
+.nav-menu-burgar-box{
+  height: 20px;
+  width: 30px;
+  transform: rotate(-45deg);
+  transition: transform 0.5s ease;
+
+}
+.nav-brand:hover .nav-menu-burgar-box{
+  transform: rotate(0deg);
+}
+
+.nav-menu-burgar-strip{
+  height: 3px;
+  background-color: #141414;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+
+.nav-project{
+  font-size: 1em;
+}
+
+
+@media screen and (max-width:780px)
+{
+  .nav-menu-text{
+    display: none;
+  }
+  .nav-menu{
+    transform: translateX(0px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* ============================= */
+
+
+/* ============================= *//* ============================= 
+/* Hero css */
+/* ============================= *//* ============================= 
+/* ************** */
+
+.hero-text{
+  transform: translateX(-100px);
+}
+
+.who-we-are-small{
+  font-size: 1.2em;
+}
+
+
+
+.who-we-are-big{
+  color: black;
+  font-size: 4.5em;
+}
+
+.who-we-are-desc{
+  font-size: 1em;
+  font-weight: 500;
+  transform: translateX(100px);
+  max-width: 500px;
+  line-height: 35px;
+}
+
+@media screen and (max-width:780px)
+{
+  .who-we-are-small{
+    text-align: center;
+  }
+  .who-we-are-big{
+    font-size: 2em;
+    text-align: center;
+  }
+  .who-we-are-desc{
+    max-width: 100%;
+    transform: translateX(0px);
+    text-align: center;
+    padding: 0px 10px;
+  }
+  .hero-text{
+    transform: translateX(0px);
+  }
+}
+
+/* ********** */
+
+
+
+.hero-image-1{
+  width: 400px;
+  /* transform: translate(200px,-400px); */
+  box-shadow: 0px 40px 40px 20px rgba(0, 0, 0, 0.228);
+}
+
+.hero-image-2{
+  height: 300px;
+  /* transform: translate(-250px,-100px); */
+  box-shadow: 10px 20px 30px 20px rgba(0, 0, 0, 0.084);
+
+}
+
+.hero-image-block{
+  height: 300px;
+}
+
+
+/* ========================================================= */
+/* sidebar */
+/* ========================================================= */
+.sidebar-box{
+  color: #2e2e2e;
+  height:200px ;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  transform: translateY(calc(50vh - 100px));
+  font-weight: bold;
+  letter-spacing: 2px;
+  z-index: 1000;
+  transition: 1s ease;
+}
+
+.right{
+  right: 0;
+  writing-mode: vertical-lr;
+}
+
+.left{
+  left: 0;
+  writing-mode: vertical-rl;
+}
+
+
+.sidebar-box:hover {
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.sidebar-animation-what-we-do{
+  height: 100vh;
+  position: fixed;
+  z-index: 800;
+  /* background-color:#141414; */
+  background-color:black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:780px)
+{
+  .sidebar-box{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+/*  */
+/* ===============================================*/
+/* parallax */
+/* ===============================================*/
+
+.code-is-love{
+  transform: translateY(-100px);
+}
+.parallax-img{
+ width: 100%;
+ /* height: 120%; */
+
+}
+
+.parallax-box-footer{
+  height: 600px;
+  overflow-y: hidden;
+}
+
+.parallax-box{
+  height: 600px;
+  overflow-y: hidden;
+}
+.view-project{
+  color:rgb(255, 255, 255);
+}
+.view-project svg{
+  fill: white;
+}
+/* .view-project:hover{
+  color: #f5db4a;
+}
+.view-project:hover svg{
+  fill: #f5db4a;
+} */
+
+@media screen and (max-width:780px)
+{ 
+  .code-is-love{
+    transform: translateY(-200px);
   }
+  .parallax-box{
+    display: none;
+  }
+  .parallax-box-footer{
+    height: 300px;
+  }
+  .parallax-img{
+    min-height: 400px
+  }
+
+}
+
+
+/* ============================================== */
+/* Team css */
+/* ============================================== */
+
+.team-title-big{
+  font-size: 4.5em;
+  font-weight: 300;
+}
+
+.team-bg-box{
+  transform: translateX(-200px);
+  height: 300px;
+
+}
+.team-code-img{
+  width: 250px;
+  transform: translate(350px,-200px);
+  box-shadow: 10px 20px 30px 20px rgba(0, 0, 0, 0.249);
+
+}
+.team-member-img{
+  box-shadow: 10px 20px 30px 20px rgba(0, 0, 0, 0.249);
+  border-radius: 10px;
+  /* transform: translateX(50px); */
+}
+
+.team-member-img-card{
+  background-color: grey;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.team-test{
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background-color: grey;
+}
+
+
+.team-cosmetic-box{
+  padding-top: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  transform: translate(0,100px);
+  box-shadow: 10px 20px 30px 10px rgba(0, 0, 0, 0.098);
+  transition: background-color 1s ease, color 0.5s  ease;
+  border-radius: 10px;
+
+}
+
+.team-cosmetic-box:hover{
+  background-color: #f5db4a;
+  color: white;
+
+}
+.team-cosmetic-box:hover svg{
+  fill:white;
+  transition: fill 0.5s ease;
+}
+
+.team-side-bar{
+  position: absolute;
+  height: 250vh;
+  max-height: 2000px;
+  width: 70%;
+  right: 0;
+  background-color: rgb(242, 242, 242);
+}
+
+@media screen and (max-width:780px)
+{   
+  .team-title-big{
+    font-size: 2em;
+    text-align: center;
+  }
+  .team-bg-box,.team-cosmetic-box{
+    display: none;
+  }
+
+}
+/* ********* *******************/
+
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* WHAT WE DO  */
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* ********************************************************************** */
+
+.what-we-do-big{
+  font-size: 5em;
+}
+
+.what-we-do-med{
+  font-size: 2em;
+}
+
+.wwd-space{
+  width: 100%;
+  height: 200px;
+}
+.wwd-websites-box{
+  height: 0px;
+  width: 0%;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 10px 20px 30px 10px rgba(0, 0, 0, 0.098);
+  overflow: hidden;
+}
+.wwd-card-translate{
+  height: 200px;
+  width: 100%;
+  transform: translate(-10px,-100px);
+  transition: transform 1s ease-in-out,box-shadow 0.5s ease,height 0.5s ease,width 0.5s ease;
+}
+
+.wwd-websites-box:hover{
+  box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.098);
+}
+.wwd-card-preview{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 10px 20px 30px 10px rgba(0, 0, 0, 0.098);
+  transition: background-color 1s ease,box-shadow 0.5s ease;
+  cursor: pointer;
+}
+.wwd-card-preview:hover{
+  background-color: #f8c246;
+  box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.098);
+}
+
+@media screen and (max-width:780px){
+  .wwd-websites-box{
+    transform: translate(0px,0px);
+  }
+  .wwd-space{
+    height: 80px;
+  }
+  .what-we-do-big{
+    font-size: 3em;
+  }
+  
+  .what-we-do-med{
+    font-size: 1.3em;
+  }
+}
+
+
+
+
+
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* ********************************************************************** */
+
+
+/* ********* *******************/
+/* footer */
+/* ********* *******************/
+.footer-secondary{
+  height: 300px;
+}
+
+.footer-primary{
+  height: 200px;
+  background-color: black;
+}
+
+/* ================================= */
+/* menu */
+/* ================================= */
+.menu-box{
+  position: fixed;
+  z-index: 3000;
+  background-color: #141414;
+  width: 30%;
+  height: 100vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+ 
+}
+
+.menu-link{
+  max-width: 300px;
+  margin: auto;
+  transition: transform 0.3s ease
+}
+
+.menu-link-underline{
+  margin-top: 20px;
+  position: relative;
+  height: 3px;
+  width: 0px;
+  background-color: #f5db4a;
+  transition: width 0.3s ease-in-out;
+  transform: translateY(-35px);
+}
+
+.menu-link:hover .menu-link-underline{
+  width: 100%;
+}
+
+.menu-link:hover{
+  transform: scale(1.5);
+  color: #f8c74c;
+  /* color: #e1e1e1; */
+}
+
+/* ======================================= */
+/* ---------------------------------------- */
+
+.test-box{ 
+  position: fixed;
+  height: 300px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  /* margin: auto; */
+  /* left: calc(50% - 200px); */
+}
+.test-box-tree{ 
+  position: fixed;
+  height: 500px;
+  width: 300px;
+  left: 0;
+  bottom: 0;
+ 
+}
+.test-box-palace { 
+  position: fixed;
+  height: 500px;
+  width: 800px;
+  right: 0;
+  bottom: 0;
+  
+}
+.test-box-palace:hover{
+  filter:brightness(1.5);
+}
+.test-box-balloon{ 
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  left: 700px;
+  bottom: 0;
+  
+}
+.test-box-leaves { 
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  
+}
+.test-box-mountain { 
+  position: fixed;
+  height: 700px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  
+}
+.test-box-sky { 
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  
+}
+
+.test-container-fixed{
+  position: fixed;
+  height: 100vh;
+  overflow-y: scroll;
+
+}
+
+.space-1000{
+  width: 100%;
+  height: 1000px;
+}
+.img-fluid-2{
+  height: 100%;
+  width: 100%;
+}
+
+.bg-lightblue{
+  background-color: lightblue;
+}
+
+.sun{
+  top: 100px;
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+  position: fixed;
+  border-radius: 50%;
+  left: calc(50% - 25px);
 }
